@@ -1,9 +1,18 @@
-subprojects {
+allprojects {
   apply plugin: 'java'
-  apply plugin: 'application'
 
-  version = 1.0
-  sourceCompatibility= 1.8
+  group = 'com.vsocolov.booksreviews'
+  version = '0.0.1-SNAPSHOT'
+  sourceCompatibility = 1.8
+
+  ext {
+    springBootVersion = '2.0.2.RELEASE'
+    h2Version = '1.4.197'
+  }
+}
+
+subprojects {
+  apply plugin: 'application'
 
   repositories {
     mavenCentral()

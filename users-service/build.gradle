@@ -1,1 +1,6 @@
-mainClassName ='com.vsocolov.booksreviews.usersservice.UsersMainApp'
+mainClassName = 'com.vsocolov.booksreviews.usersservice.UsersMainApp'
+
+dependencies {
+  compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+  compile("com.h2database:h2:${h2Version}")
+}
