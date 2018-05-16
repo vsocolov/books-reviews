@@ -1,7 +1,13 @@
 package com.vsocolov.booksreviews.usersservice;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
 public class UsersMainApp {
+
   public static void main(final String[] args) {
-    System.out.println("Hello from users-service");
+    SpringApplication.run(UsersMainApp.class, args);
   }
+
 }
