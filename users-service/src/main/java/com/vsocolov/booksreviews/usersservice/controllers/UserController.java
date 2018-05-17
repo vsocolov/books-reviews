@@ -7,6 +7,8 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 import static com.vsocolov.booksreviews.usersservice.controllers.UserController.USER_ROOT_PATH;
 
 @RestController
@@ -22,7 +24,7 @@ public class UserController {
   }
 
   @RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-  public Iterable<User> userList() {
+  public List<User> userList() {
     return userService.findAll();
   }
 }
