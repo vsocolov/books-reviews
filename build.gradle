@@ -1,25 +1,35 @@
 allprojects {
-  apply plugin: 'java'
-
   group = 'com.vsocolov.booksreviews'
   version = '0.0.1-SNAPSHOT'
-  sourceCompatibility = 1.8
-  targetCompatibility = 1.8
 
   ext {
     springBootVersion = '2.0.2.RELEASE'
     h2Version = '1.4.197'
+    junitVersion = '4.12'
   }
 }
 
 subprojects {
-  apply plugin: 'application'
+  apply plugin: 'java'
+
+  sourceCompatibility = 1.8
+  targetCompatibility = 1.8
+
+  buildscript {
+    repositories {
+      mavenCentral()
+    }
+
+    dependencies {
+      classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+  }
 
   repositories {
     mavenCentral()
   }
 
   dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile("junit:junit:${junitVersion}")
   }
 }
