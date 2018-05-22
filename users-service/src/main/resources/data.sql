@@ -1,1 +1,1 @@
-INSERT INTO users (id, first_name, last_name, birth_date) VALUES (1, 'Vlad', 'Socolov', '1989-11-16'), (2, 'Valentina', 'Socolov', '1994-03-28')
+INSERT INTO users (first_name, last_name, birth_date) VALUES ('Vlad', 'Socolov', '1989-11-16'), ('Valentina', 'Socolov', '1994-03-28')

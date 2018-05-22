@@ -19,7 +19,7 @@ public class User implements Serializable {
   private static final String BIRTH_DATE = "birth_date";
 
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
   @Column(name = FIRST_NAME)
