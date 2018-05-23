@@ -5,6 +5,7 @@ allprojects {
   ext {
     springBootVersion = '2.0.2.RELEASE'
     springFoxVersion = '2.7.0'
+    springCloudVersion = 'Finchley.BUILD-SNAPSHOT'
     h2Version = '1.4.197'
     junitVersion = '4.12'
   }
@@ -29,6 +30,8 @@ subprojects {
 
   repositories {
     mavenCentral()
+    maven { url "https://repo.spring.io/snapshot" }
+    maven { url "https://repo.spring.io/milestone" }
   }
 
   dependencies {

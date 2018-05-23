@@ -1,0 +1,14 @@
+server:
+  port: 9999
+
+zuul:
+  prefix: /api
+  routes:
+    books-service:
+      url: http://localhost:9001
+    users-service:
+      url: http://localhost:9000
+
+ribbon:
+  eureka:
+    enabled: false
