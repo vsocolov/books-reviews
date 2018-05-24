@@ -1,4 +1,4 @@
-include 'users-service', 'books-service', 'api-gateway'
+include 'users-service', 'books-service', 'api-gateway', 'service-discovery'
 
 rootProject.name ='books-reviews'
 
